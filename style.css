@@ -1,0 +1,68 @@
+body {
+    background-color: rgb(105, 105, 105);
+    font-family: 'Ubuntu', sans-serif;
+}
+.berry {
+    padding: 10px 20px; /* Adjust padding as needed */
+    position: relative; /* Required for positioning the image */
+  }
+  
+.berry::after {
+    content: ""; /* Required for the ::after pseudo-element */
+    display: inline-block;
+    width: 40px; /* Set width of the image preview */
+    height: 40px; /* Set height of the image preview */
+    background-image: url('img/Spidey_Bear.png'); /* Set the URL of the image */
+    background-size: cover; /* Adjust background size */
+    position: absolute;
+    top: 50%; /* Position the image vertically centered */
+    right: -50px; /* Adjust distance between button and image */
+    transform: translateY(-50%); /* Adjust vertical alignment */
+  }
+
+/* Button styles */
+.lavender-button {
+    padding: 10px 20px; /* Adjust padding as needed */
+    background-color: #9a83a6; /* Light lavender background color */
+    color: #ffffff; /* Text color */
+    border: 2px outset #6960a1; /* Dark blue outline */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor style */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+  }
+  
+  /* Button hover effect */
+  .lavender-button:hover {
+    background-color: #D8BFD8; /* Darken background color on hover */
+  }
+  
+  /* Button click effect */
+  .lavender-button:active {
+    background-color: #8A2BE2; /* Darken background color when clicked */
+  }
+
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#canvas-container {
+    margin-right: 20px; /* Adjust as needed */
+}
+
+#controls-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.group {
+    background-color: #dadadae3;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px; /* Adjust as needed */
+}
+
+.group h2 {
+    margin-top: 0;
+}
