@@ -70,7 +70,7 @@ function drawTriangle3D(vertices) {
 function drawTriangle3DUVNormals(vertices, uvs, normals) {
     //console.log(vertices,uvs,normals);
     //console.log(vertices);
-    var n = 3; // The number of vertices
+    var n = vertices.length/3; // The number of vertices
 
     // Create a buffer object
     var vertexBuffer = gl.createBuffer();

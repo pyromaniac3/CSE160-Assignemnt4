@@ -9,62 +9,52 @@
     <script src="./lib/cuon-matrix.js"></script>
     <script src="./Shape Classes/Triangle.js"></script>
     <script src="./Shape Classes/Cube.js"></script>
+    <script src="./Shape Classes/Sphere.js"></script>
     <script src="world.js"></script>
 </head>
 
 <body onload="main()">
     <div id="container">
         <div id="canvas-container">
-            <canvas id="webgl" width="800" height="800">
+            <canvas id="webgl" width="400" height="400">
                 Please use a browser that supports "canvas"
             </canvas>
             <!-- Current Frame Rate -->
             <p id="fps"> XXX </p>
-            Shift+Click to see them Dance!
-            <br>
-            Press Escape to stop the power of Dance!
         </div>
         <!-- Animal Settings -->
         <div id="controls-container">
             <!-- Animation Sliders -->
             <div class ='group'>
-                <h2>Lighting Color</h2>
-                <br>
-                <label for="size">Red</label>
-                <input type="range" id="redSlider" name="size" min="0" max="255" value="0"/>
-                <br>
-                <label for="size">Green</label>
-                <input type="range" id="greenSlider" name="size" min="0" max="255" value="0"/>
-                <br>
-                <label for="size">Blue</label>
-                <input type="range" id="blueSlider" name="size" min="0" max="255" value="0"/>
-                <br>
-                <br>
-                <h2>Lighting Controls</h2>
-                <br>
-                <label>Light X:</label>
-                <input type="range" id="lightSliderX" min="-10" max="10" step="0.1" value="0">
-                <br>
-                <label>Light Y:</label>
-                <input type="range" id="lightSliderY" min="0" max="19" step="0.1" value="19">
-                <br>
-                <label>Light Z:</label>
-                <input type="range" id="lightSliderZ" min="-10" max="10" step="0.1" value="0">
-                <br>
-                <br>
-                <button id = "normalize">Normalize</button>
-                <br>
+                <button id = "normalize">Normalize</button> 
                 <button id = "power">On/Off Lighting</button>
+                <button id = "animate">Animated Spot Light</button>
                 <br>
+                <h4>Spotlight Color</h4>
+                <label for="size">Red</label>
+                <input type="range" id="redSlider" name="size" min="0" max="1" value="1" step = ".1"/>
+                <label for="size">Green</label>
+                <input type="range" id="greenSlider" name="size" min="0" max="1" value="1" step = ".1"/>
+                <label for="size">Blue</label>
+                <input type="range" id="blueSlider" name="size" min="0" max="1" value="1" step = ".1"/>
+                <br>
+                <h4>Spotlight Controls</h4>
+                <label>S Light X:</label>
+                <input type="range" id="SlightSliderX" min="-20" max="20" step="0.1" value="0">
+                <label>S Light Y:</label>
+                <input type="range" id="SlightSliderY" min="-2" max="19" step="0.1" value="19">
+                <label>S Light Z:</label>
+                <input type="range" id="SlightSliderZ" min="-20" max="20" step="0.1" value="0">
+                <br>
+                <h4>Point Light Controls</h4>
+                <label>P Light X:</label>
+                <input type="range" id="lightSliderX" min="-20" max="20" step="0.1" value="0">
+                <label>P Light Y:</label>
+                <input type="range" id="lightSliderY" min="-2" max="19" step="0.1" value="19">
+                <label>P Light Z:</label>
+                <input type="range" id="lightSliderZ" min="-20" max="20" step="0.1" value="0">
                 <br>
         
-            </div>
-            <div class="group">
-                <h2>Camera Settings</h3>
-                <div>
-                    <label for="size">Camera Angle</label>
-                    <input type="range" id="angleSlider" name="size" min="0" max="360" value="0"/>
-                </div>
             </div>
             <div class="group">
                 <h2>House Customizations</h2>
